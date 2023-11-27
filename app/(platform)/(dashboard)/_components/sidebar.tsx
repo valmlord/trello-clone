@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+
 import Link from "next/link";
 
 import { Plus } from "lucide-react";
@@ -56,7 +58,7 @@ export const Sidebar = ({
 
   if (!isLoadedOrg || !isLoadedOrgList || userMemberships.isLoading) {
     return (
-      <>
+      <React.Fragment>
         <div className="flex items-center justify-between mb-2">
           <Skeleton className="h-10 w-[50%]" />
           <Skeleton className="h-10 w-10" />
@@ -66,7 +68,7 @@ export const Sidebar = ({
           <NavItem.Skeleton />
           <NavItem.Skeleton />
         </div>
-      </>
+      </React.Fragment>
     );
   }
 

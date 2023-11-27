@@ -1,5 +1,3 @@
-import React from "react";
-
 import { startCase } from "lodash";
 import { auth } from "@clerk/nextjs";
 
@@ -19,10 +17,10 @@ const OrganizationIdLayout = ({
   children: React.ReactNode;
 }) => {
   return (
-    <React.Fragment>
+    <>
       <OrgControl />
       {children}
-    </React.Fragment>
+    </>
   );
 };
 
